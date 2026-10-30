@@ -211,6 +211,8 @@ class LevelReqRule(Rule["NeonWhiteWorld"], game="Neon White"):
             if self._built is None:
                 self._built = self._make_rule(self.reqs)
 
+            # TODO remap _built contents to based on what NeonWhiteWorld thinks this level needs
+
             res = self.Resolved(
                 self.reqs,
                 self._built,

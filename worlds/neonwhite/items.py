@@ -55,8 +55,7 @@ def remap_zone_list(zones, map_to_level=None):
     return [zone_name(zone, map_to_level) for zone in zones]
 
 def local_item_name(zone: str, contents: str, map_to_level):
-    zone = zone_name(zone, map_to_level)
-    return f"{zone} - {contents}"
+    return f"{zone_name(zone, map_to_level)} - {contents}"
 
 nw_items: dict[str, NWItemData] = {
     item: NWItemData("Card", NWItem.card_id + i + 1, NWItem.card_classification)
